@@ -1,3 +1,25 @@
+# Create an empty list called my_list.
+# Append the following elements to my_list: 10, 20, 30, 40.
+# Insert the value 15 at the second position in the list.
+# Extend my_list with another list: [50, 60, 70].
+# Remove the last element from my_list.
+# Sort my_list in ascending order.
+# Find and print the index of the value 30 in my_list.
+
+my_list = []
+my_list.append(10)
+my_list.append(20)
+my_list.append(30)  
+my_list.append(40)
+my_list.insert(1, 15)  # Insert 15 at the second position (index 1)
+my_list.extend([50, 60, 70])  # Extend with another list
+my_list.pop(-1)  # Remove the last element
+my_list.sort()  # Sort in ascending order
+index_of_30 = my_list.index(30)  # Find the index of the value  30
+print("Sorted List:", my_list)
+
+
+
 # Write a program that accepts user input to create a list of integers. 
 # Then, compute the sum of all the integers in the list.
 mylist = []
@@ -42,5 +64,14 @@ for i in range(n2):
 common_elements = myset1.intersection(myset2)
 print("Common elements in both sets:", common_elements)
 
+#Create a program that stores a list of words. 
+# Then, use list comprehension to create a new list that contains only the words 
+# that have an odd number of characters.
 
-#Create a program that stores a list of words. Then, use list comprehension to create a new list that contains only the words that have an odd number of characters.
+mywords = []
+n = int(input("Enter the number of words you want to input: "))
+for i in range(n):
+    word = input(f"Enter word {i+1}: ")
+    mywords.append(word)
+odd_length_words = [word for word in mywords if len(word) % 2 != 0]
+print("Words with an odd number of characters:", odd_length_words)
